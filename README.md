@@ -60,6 +60,10 @@ log_returns = log_returns.dropna()
 number_of_assets = len(data['Adj Close'].columns)  
 print(f"Data points after cleaning (na removal): {len(log_returns)}")
 ```
+***Output***  
+*Data points before cleaning: 1300*  
+*Data points after cleaning (na removal): 1174*
+
 ### **4. Monte Carlo Simulation**
 
 We iterate through a loop (default: 1,000,000 iterations) to generate random weightings for the assets. For every iteration, we calculate:
@@ -114,6 +118,18 @@ print("Portfolio Allocation:")
 for ticker, weight in zip(tickers, max_sr_weights):  
     print(f"{ticker}: {weight:.2%}")
 ```
+***Output***  
+*Most Efficient Portfolio (Max Sharpe Ratio: 1.02)*  
+*Annualised Return: 15.60%*  
+*Annualised Volatility: 15.35%*  
+*Portfolio Allocation:*  
+*BHP: 17.37%*  
+*AAPL: 12.98%*  
+*CBA.AX: 45.54%*  
+*MSFT: 0.22%*  
+*META: 22.99%*  
+*TSLA: 0.90%*  
+
 ### **6. Visualization**
 
 Finally, we plot all simulated portfolios.
@@ -139,7 +155,8 @@ plt.legend()
 plt.grid(True, linestyle='--', alpha=0.6)  
 plt.show()
 ```
-<img width="945" height="545" alt="output" src="https://github.com/user-attachments/assets/c942eb53-cb3c-485e-8d46-f3a9ed14098f" />
+<img width="945" height="545" alt="output1" src="https://github.com/user-attachments/assets/b351ba6d-b210-42dd-af62-448ea7f1d628" />
+
 
 *Note: The Max Sharpe Ratio point is the Efficient Portfolio. This portfolio represents the highest risk-based return for this given dataset.*
 
