@@ -1,4 +1,4 @@
-# Portfolio Optimization: Efficient Frontier & Sharpe Ratio using Python
+# Portfolio Optimisation: Efficient Frontier & Sharpe Ratio using Python
 
 This project implements a **Monte Carlo simulation** to identify the **Efficient Frontier** and determine the optimal portfolio allocation for a given set of stocks.
 
